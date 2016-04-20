@@ -4,7 +4,7 @@
 #
 Name     : libmicrohttpd
 Version  : 0.9.49
-Release  : 2
+Release  : 3
 URL      : http://ftp.gnu.org/gnu/libmicrohttpd/libmicrohttpd-0.9.49.tar.gz
 Source0  : http://ftp.gnu.org/gnu/libmicrohttpd/libmicrohttpd-0.9.49.tar.gz
 Summary  : A library for creating an embedded HTTP server
@@ -13,7 +13,7 @@ License  : GFDL-1.3 LGPL-2.1
 Requires: libmicrohttpd-lib
 Requires: libmicrohttpd-doc
 BuildRequires : curl-dev
-BuildRequires : gnutls
+BuildRequires : gnutls-dev
 BuildRequires : libgcrypt-dev
 BuildRequires : texinfo
 
