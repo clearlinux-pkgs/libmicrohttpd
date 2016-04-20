@@ -20,6 +20,7 @@ libmicrohttpd.so.12:MHD_get_connection_values
 libmicrohttpd.so.12:MHD_get_daemon_info
 libmicrohttpd.so.12:MHD_get_fdset
 libmicrohttpd.so.12:MHD_get_fdset2
+libmicrohttpd.so.12:MHD_get_reason_phrase_for
 libmicrohttpd.so.12:MHD_get_response_header
 libmicrohttpd.so.12:MHD_get_response_headers
 libmicrohttpd.so.12:MHD_get_timeout
