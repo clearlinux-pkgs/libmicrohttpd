@@ -4,7 +4,7 @@
 #
 Name     : libmicrohttpd
 Version  : 0.9.49
-Release  : 3
+Release  : 4
 URL      : http://ftp.gnu.org/gnu/libmicrohttpd/libmicrohttpd-0.9.49.tar.gz
 Source0  : http://ftp.gnu.org/gnu/libmicrohttpd/libmicrohttpd-0.9.49.tar.gz
 Summary  : A library for creating an embedded HTTP server
