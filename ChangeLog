@@ -1,3 +1,77 @@
+Thu Jun  2 09:55:50 CEST 2016
+	Releasing libmicrohttpd 0.9.50. -CG
+
+Wed Jun  1 21:59:34 CEST 2016
+	Do not send "Content-Length" header for 1xx/204/304 status codes. -CG
+
+Tue May 17 13:32:21 CEST 2016
+	Allow clients to determine whether a connection is suspended;
+	introduces MHD_CONNECTION_INFO_CONNECTION_SUSPENDED. -CG/FC
+
+Sun May 15 12:17:25 CEST 2016
+	Fix handling system or process resource limit exhaustion upon
+	accept(). -CG/CP
+
+Thu May 12 08:42:19 CEST 2016
+	Fix handling of partial writes in MHD_USE_EPOLL_LINUX_ONLY; only
+	consider sockets returning EAGAIN as unready. -CG/CP
+
+Mon May  2 06:08:26 CEST 2016
+	Adding logic to help address FE performance issue as
+	discussed on the mailinglist with subject
+        "single-threaded daemon, multiple pending requests, responses batched".
+	The new logic is only enabled when MHD_USE_EPOLL_TURBO is set.
+	Note that some additional refactoring was also done to clean up
+	the code and avoid code duplication, which may have actually fixed
+	an unrelated issue with HTTPS and a POLL-style event loop. -CG
+
+Sat Apr 30 10:22:37 CEST 2016
+	Added clarifications to manual based on questions on list. -CG
+
+Sat Apr 23 20:12:01 CET 2016
+	Tests perf_get_concurrent and test_concurrent_stop ported to use
+	pthread instead of fork(). Added more error detections. -EG
+
+Sat Apr 23 16:06:30 CET 2016
+	Improved test_quiesce test. -EG
+
+Sat Apr 23 15:39:38 CET 2016
+	Notify other threads in MHD_quiesce_daemon() so listen socket FD
+	is removed from awaiting select() and poll(). -EG
+
+Sat Apr 23 14:17:15 CET 2016
+	Revert "shutdown trigger select" on Darwin. Fixed daemon shutdown
+	on Darwin without "MHD_USE_PIPE_FOR_SHUTDOWN" option. -EG
+
+Fri Apr 22 14:29:28 CET 2016
+	Fixed race conditions when stopping quiesced daemon with thread
+	pool. -EG
+
+Wed Apr 20 18:12:30 CET 2016
+	Fixed macros in sysfdsetsize.c which could prevent compiling with
+	non-default FD_SETSIZE.
+	Fixed comments in mhd_str.c.
+	Updated test_post.c to not ignore specific error on W32 if libcurl
+	is built with workaround for WinSock bug. -EG
+
+Mon Apr 18 19:35:14 CET 2016
+	Fixed data races leading to inability in rare situations to
+	resume suspended connection. -EG
+
+Tue Apr 13 21:46:01 CET 2016
+	Removed unneeded locking for global timeout list in
+	MHD_USE_THREAD_PER_CONNECTION mode.
+	Added 'simplepost' and 'largepost' examples to VS projects.
+	Added strtoXX() locale-independent replacement functions.
+	Added more error checking and minor fixes in digest auth
+	functions - should improve security.
+	Ignored specific errors in 'test_post' test until libcurl
+	will implement workaround for WinSock bug.
+	Fixed handling of caller-supplied socket with
+	MHD_OPTION_LISTEN_SOCKET (regression in 0.9.49).
+	Minor fixes.
+	Various cosmetics and comments fixes. -EG
+
 Sat Apr 09 13:05:42 CET 2016
 	Releasing libmicrohttpd 0.9.49. -EG
 
