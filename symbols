@@ -3,6 +3,7 @@ libmicrohttpd.so.12:MHD_add_response_footer
 libmicrohttpd.so.12:MHD_add_response_header
 libmicrohttpd.so.12:MHD_basic_auth_get_username_password
 libmicrohttpd.so.12:MHD_create_post_processor
+libmicrohttpd.so.12:MHD_create_response_for_upgrade
 libmicrohttpd.so.12:MHD_create_response_from_buffer
 libmicrohttpd.so.12:MHD_create_response_from_callback
 libmicrohttpd.so.12:MHD_create_response_from_data
@@ -44,3 +45,4 @@ libmicrohttpd.so.12:MHD_start_daemon
 libmicrohttpd.so.12:MHD_start_daemon_va
 libmicrohttpd.so.12:MHD_stop_daemon
 libmicrohttpd.so.12:MHD_suspend_connection
+libmicrohttpd.so.12:MHD_upgrade_action
