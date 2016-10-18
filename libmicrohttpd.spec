@@ -4,7 +4,7 @@
 #
 Name     : libmicrohttpd
 Version  : 0.9.51
-Release  : 7
+Release  : 8
 URL      : http://ftp.gnu.org/gnu/libmicrohttpd/libmicrohttpd-0.9.51.tar.gz
 Source0  : http://ftp.gnu.org/gnu/libmicrohttpd/libmicrohttpd-0.9.51.tar.gz
 Summary  : A library for creating an embedded HTTP server
@@ -57,6 +57,10 @@ lib components for the libmicrohttpd package.
 
 %build
 export LANG=C
+export CFLAGS="$CFLAGS -Os -ffunction-sections "
+export FCFLAGS="$CFLAGS -Os -ffunction-sections "
+export FFLAGS="$CFLAGS -Os -ffunction-sections "
+export CXXFLAGS="$CXXFLAGS -Os -ffunction-sections "
 %configure --disable-static
 make V=1  %{?_smp_mflags}
 
