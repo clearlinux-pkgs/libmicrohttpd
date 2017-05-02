@@ -6,7 +6,7 @@
 #
 Name     : libmicrohttpd
 Version  : 0.9.53
-Release  : 11
+Release  : 12
 URL      : http://ftp.gnu.org/gnu/libmicrohttpd/libmicrohttpd-0.9.53.tar.gz
 Source0  : http://ftp.gnu.org/gnu/libmicrohttpd/libmicrohttpd-0.9.53.tar.gz
 Source99 : http://ftp.gnu.org/gnu/libmicrohttpd/libmicrohttpd-0.9.53.tar.gz.sig
