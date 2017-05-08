@@ -1,3 +1,38 @@
+Tue May  2 18:37:53 CEST 2017
+	Update manual. -CG
+	Add MHD_CONNECTION_INFO_REQUEST_HEADER_SIZE.
+	Releasing GNU libmicrohttpd 0.9.54. -CG
+
+Thu Apr 27 22:31:00 CEST 2017
+	Replaced flags MHD_USE_PEDANTIC_CHECKS and MHD_USE_PERMISSIVE_CHECKS by
+	single option MHD_OPTION_STRICT_FOR_CLIENT. Flag MHD_USE_PEDANTIC_CHECKS
+	is still supported. -EG
+
+Tue Apr 26 15:11:00 CEST 2017
+	Fixed shift in HTTP reasons strings.
+	Added test for HTTP reasons strings. -EG
+
+Tue Apr 25 19:11:00 CEST 2017
+	Allow flag MHD_USE_POLL with MHD_USE_THREAD_PER_CONNECTION and without
+	flag MHD_USE_INTERNAL_POLLING_THREAD for backward compatibility. -EG
+
+Mon Apr 24 17:29:45 CEST 2017
+	Enforce RFC 7230's rule on no whitespace by default,
+	introduce new MHD_USE_PERMISSIVE_CHECKS to disable. -CG
+
+Sun Apr 23 20:05:44 CEST 2017
+	Enforce RFC 7230's rule on no whitespace in HTTP header
+	field names if MHD_USE_PEDANTIC_CHECKS is set. -CG
+
+Sun Apr 23 19:20:33 CEST 2017
+	Replace remaining occurences of sprintf() with
+	MHD_snprintf_(). Thanks to Ram for pointing this out. -CG
+
+Sat Apr 22 20:39:00 MSK 2017
+	Fixed builds in Linux without epoll.
+	Check for invalid --with-thread= configure parameters.
+	Fixed support for old libgcrypt on W32 with W32 threads. -EG
+
 Tue Apr 11 22:17:00 MSK 2017
 	Releasing GNU libmicrohttpd 0.9.53. -EG
 
