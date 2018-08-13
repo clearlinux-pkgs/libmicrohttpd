@@ -1,2 +1,3 @@
 libc.so.6
+libgnutls.so.30
 libpthread.so.0

@@ -16,6 +16,7 @@ libmicrohttpd.so.12:MHD_destroy_post_processor
 libmicrohttpd.so.12:MHD_destroy_response
 libmicrohttpd.so.12:MHD_digest_auth_check
 libmicrohttpd.so.12:MHD_digest_auth_get_username
+libmicrohttpd.so.12:MHD_free
 libmicrohttpd.so.12:MHD_get_connection_info
 libmicrohttpd.so.12:MHD_get_connection_values
 libmicrohttpd.so.12:MHD_get_daemon_info
