@@ -29,3 +29,4 @@ Configure miss: whether to add pkg-config special search directories
 Configure miss: whether GnuTLS require libgcrypt initialisaion
 Configure miss: whether to compile with support for code coverage analysis
 Configure miss: whether to enable debug asserts
+Configure miss: whether to compile experimental code

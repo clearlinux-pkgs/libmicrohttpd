@@ -5,16 +5,16 @@
 # Source0 file verified with key 0x939E6BE1E29FC3CC (grothoff@gnu.org)
 #
 Name     : libmicrohttpd
-Version  : 0.9.59
-Release  : 14
-URL      : https://ftp.gnu.org/gnu/libmicrohttpd/libmicrohttpd-0.9.59.tar.gz
-Source0  : https://ftp.gnu.org/gnu/libmicrohttpd/libmicrohttpd-0.9.59.tar.gz
-Source99 : https://ftp.gnu.org/gnu/libmicrohttpd/libmicrohttpd-0.9.59.tar.gz.sig
+Version  : 0.9.60
+Release  : 15
+URL      : https://ftp.gnu.org/gnu/libmicrohttpd/libmicrohttpd-0.9.60.tar.gz
+Source0  : https://ftp.gnu.org/gnu/libmicrohttpd/libmicrohttpd-0.9.60.tar.gz
+Source99 : https://ftp.gnu.org/gnu/libmicrohttpd/libmicrohttpd-0.9.60.tar.gz.sig
 Summary  : A library for creating an embedded HTTP server
 Group    : Development/Tools
 License  : LGPL-2.1
-Requires: libmicrohttpd-lib
-Requires: libmicrohttpd-license
+Requires: libmicrohttpd-lib = %{version}-%{release}
+Requires: libmicrohttpd-license = %{version}-%{release}
 BuildRequires : curl-dev
 BuildRequires : gnutls-dev
 BuildRequires : libgcrypt-dev
@@ -33,8 +33,8 @@ logic to generate the content.
 %package dev
 Summary: dev components for the libmicrohttpd package.
 Group: Development
-Requires: libmicrohttpd-lib
-Provides: libmicrohttpd-devel
+Requires: libmicrohttpd-lib = %{version}-%{release}
+Provides: libmicrohttpd-devel = %{version}-%{release}
 
 %description dev
 dev components for the libmicrohttpd package.
@@ -51,7 +51,7 @@ doc components for the libmicrohttpd package.
 %package lib
 Summary: lib components for the libmicrohttpd package.
 Group: Libraries
-Requires: libmicrohttpd-license
+Requires: libmicrohttpd-license = %{version}-%{release}
 
 %description lib
 lib components for the libmicrohttpd package.
@@ -66,14 +66,14 @@ license components for the libmicrohttpd package.
 
 
 %prep
-%setup -q -n libmicrohttpd-0.9.59
+%setup -q -n libmicrohttpd-0.9.60
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1534194632
+export SOURCE_DATE_EPOCH=1541605153
 export CFLAGS="$CFLAGS -Os -fdata-sections -ffunction-sections -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -Os -fdata-sections -ffunction-sections -fno-semantic-interposition "
 export FFLAGS="$CFLAGS -Os -fdata-sections -ffunction-sections -fno-semantic-interposition "
@@ -89,10 +89,10 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1534194632
+export SOURCE_DATE_EPOCH=1541605153
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/doc/libmicrohttpd
-cp COPYING %{buildroot}/usr/share/doc/libmicrohttpd/COPYING
+mkdir -p %{buildroot}/usr/share/package-licenses/libmicrohttpd
+cp COPYING %{buildroot}/usr/share/package-licenses/libmicrohttpd/COPYING
 %make_install
 
 %files
@@ -112,8 +112,8 @@ cp COPYING %{buildroot}/usr/share/doc/libmicrohttpd/COPYING
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libmicrohttpd.so.12
-/usr/lib64/libmicrohttpd.so.12.46.0
+/usr/lib64/libmicrohttpd.so.12.47.0
 
 %files license
-%defattr(-,root,root,-)
-/usr/share/doc/libmicrohttpd/COPYING
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/libmicrohttpd/COPYING
