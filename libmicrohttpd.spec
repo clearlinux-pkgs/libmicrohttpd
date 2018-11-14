@@ -6,10 +6,10 @@
 #
 Name     : libmicrohttpd
 Version  : 0.9.60
-Release  : 15
-URL      : https://ftp.gnu.org/gnu/libmicrohttpd/libmicrohttpd-0.9.60.tar.gz
-Source0  : https://ftp.gnu.org/gnu/libmicrohttpd/libmicrohttpd-0.9.60.tar.gz
-Source99 : https://ftp.gnu.org/gnu/libmicrohttpd/libmicrohttpd-0.9.60.tar.gz.sig
+Release  : 16
+URL      : https://mirrors.kernel.org/gnu/libmicrohttpd/libmicrohttpd-0.9.60.tar.gz
+Source0  : https://mirrors.kernel.org/gnu/libmicrohttpd/libmicrohttpd-0.9.60.tar.gz
+Source99 : https://mirrors.kernel.org/gnu/libmicrohttpd/libmicrohttpd-0.9.60.tar.gz.sig
 Summary  : A library for creating an embedded HTTP server
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -73,7 +73,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1541605153
+export SOURCE_DATE_EPOCH=1542161968
 export CFLAGS="$CFLAGS -Os -fdata-sections -ffunction-sections -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -Os -fdata-sections -ffunction-sections -fno-semantic-interposition "
 export FFLAGS="$CFLAGS -Os -fdata-sections -ffunction-sections -fno-semantic-interposition "
@@ -89,7 +89,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1541605153
+export SOURCE_DATE_EPOCH=1542161968
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libmicrohttpd
 cp COPYING %{buildroot}/usr/share/package-licenses/libmicrohttpd/COPYING
