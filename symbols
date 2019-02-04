@@ -5,6 +5,7 @@ libmicrohttpd.so.12:MHD_basic_auth_get_username_password
 libmicrohttpd.so.12:MHD_create_post_processor
 libmicrohttpd.so.12:MHD_create_response_for_upgrade
 libmicrohttpd.so.12:MHD_create_response_from_buffer
+libmicrohttpd.so.12:MHD_create_response_from_buffer_with_free_callback
 libmicrohttpd.so.12:MHD_create_response_from_callback
 libmicrohttpd.so.12:MHD_create_response_from_data
 libmicrohttpd.so.12:MHD_create_response_from_fd
@@ -15,7 +16,9 @@ libmicrohttpd.so.12:MHD_del_response_header
 libmicrohttpd.so.12:MHD_destroy_post_processor
 libmicrohttpd.so.12:MHD_destroy_response
 libmicrohttpd.so.12:MHD_digest_auth_check
+libmicrohttpd.so.12:MHD_digest_auth_check2
 libmicrohttpd.so.12:MHD_digest_auth_check_digest
+libmicrohttpd.so.12:MHD_digest_auth_check_digest2
 libmicrohttpd.so.12:MHD_digest_auth_get_username
 libmicrohttpd.so.12:MHD_free
 libmicrohttpd.so.12:MHD_get_connection_info
@@ -33,6 +36,7 @@ libmicrohttpd.so.12:MHD_is_feature_supported
 libmicrohttpd.so.12:MHD_lookup_connection_value
 libmicrohttpd.so.12:MHD_post_process
 libmicrohttpd.so.12:MHD_queue_auth_fail_response
+libmicrohttpd.so.12:MHD_queue_auth_fail_response2
 libmicrohttpd.so.12:MHD_queue_basic_auth_fail_response
 libmicrohttpd.so.12:MHD_queue_response
 libmicrohttpd.so.12:MHD_quiesce_daemon

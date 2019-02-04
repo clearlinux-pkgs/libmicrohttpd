@@ -1,3 +1,44 @@
+Sat Dec  8 22:53:56 CET 2018
+	Added test for RFC 7616 and documented new API.
+	Releasing libmicrohttpd 0.9.62. -CG
+
+Sat Dec  8 17:34:58 CET 2018
+	Adding support for RFC 7616, experimental, needs
+	testing and documentation still! -CG
+
+Fri Dec  7 12:37:17 CET 2018
+	Add option to build MHD without any threads
+	and MHD_FEATURE_THREADS to test for it.  -CG
+
+Thu Dec  6 13:25:08 BRT 2018
+	Renamed all occurrences from _model(s)_ to _mode(s)_. -SC
+
+Thu Dec  6 12:50:11 BRT 2018
+	Optimized the function MHD_create_response_from_callback() for
+	Windows by increasing its internal buffer size and allowed to customize
+	it via macro MHD_FD_BLOCK_SIZE. -SC
+
+Thu Dec  6 02:11:15 BRT 2018
+	Referenced the gnutls_load_file() function in the HTTPs examples. -SC
+
+Wed Dec  5 18:08:59 CET 2018
+	Fix regression causing URLs to be unescaped twice. -CG
+
+Sun Nov 18 13:08:11 CET 2018
+	Parse arguments with (properly) escaped URLs correctly.
+	(making things work with recent cURL changes, #5473).
+	Replace sprintf with snprintf in testcases.
+	Releasing libmicrohttpd 0.9.61. -CG
+
+Wed Nov 14 14:01:21 CET 2018
+	Fix build issue with GnuTLS < 3.0. -CG
+
+Mon Nov 12 19:50:43 CET 2018
+	Fix #5473 (test case failure due to change in libcurl). -eworm
+
+Thu Nov  8 14:53:27 CET 2018
+	Add MHD_create_response_from_buffer_with_free_callback. -CG
+
 Tue Nov  6 19:43:47 CET 2018
 	Upgrading to gettext 0.19.8.
 	Releasing libmicrohttpd 0.9.60. -CG
@@ -1736,7 +1777,7 @@ Tue May 29 13:55:03 CEST 2012
 Tue May 29 13:45:15 CEST 2012
 	Fixing bug where MHD failed to call connection termination callback
 	if a connection either was closed due to read errors or if MHD
-	was terminated with certain threading models.  Added new
+	was terminated with certain threading modes.  Added new
 	termination code MHD_REQUEST_TERMINATED_READ_ERROR for the
 	read-termination cause. -CG
 
