@@ -19,6 +19,8 @@ Configure miss: machine/param.h
 Configure miss: sys/isa_defs.h
 Configure miss: sockLib.h
 Configure miss: inetLib.h
+Configure miss: struct sockaddr_in6.sin6_len
+Configure miss: struct sockaddr_storage.ss_len
 Configure miss: whether gmtime_s is declared
 Configure miss: clock_get_time
 Configure miss: whether libcurl is usable

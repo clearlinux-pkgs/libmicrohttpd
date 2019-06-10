@@ -23,6 +23,7 @@ libmicrohttpd.so.12:MHD_digest_auth_get_username
 libmicrohttpd.so.12:MHD_free
 libmicrohttpd.so.12:MHD_get_connection_info
 libmicrohttpd.so.12:MHD_get_connection_values
+libmicrohttpd.so.12:MHD_get_connection_values_n
 libmicrohttpd.so.12:MHD_get_daemon_info
 libmicrohttpd.so.12:MHD_get_fdset
 libmicrohttpd.so.12:MHD_get_fdset2
@@ -34,6 +35,7 @@ libmicrohttpd.so.12:MHD_get_version
 libmicrohttpd.so.12:MHD_http_unescape
 libmicrohttpd.so.12:MHD_is_feature_supported
 libmicrohttpd.so.12:MHD_lookup_connection_value
+libmicrohttpd.so.12:MHD_lookup_connection_value_n
 libmicrohttpd.so.12:MHD_post_process
 libmicrohttpd.so.12:MHD_queue_auth_fail_response
 libmicrohttpd.so.12:MHD_queue_auth_fail_response2
