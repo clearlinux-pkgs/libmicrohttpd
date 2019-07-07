@@ -5,16 +5,18 @@
 # Source0 file verified with key 0x460A317C3326D2AE (k2k@narod.ru)
 #
 Name     : libmicrohttpd
-Version  : 0.9.64
-Release  : 19
-URL      : https://mirrors.kernel.org/gnu/libmicrohttpd/libmicrohttpd-0.9.64.tar.gz
-Source0  : https://mirrors.kernel.org/gnu/libmicrohttpd/libmicrohttpd-0.9.64.tar.gz
-Source99 : https://mirrors.kernel.org/gnu/libmicrohttpd/libmicrohttpd-0.9.64.tar.gz.sig
+Version  : 0.9.65
+Release  : 20
+URL      : https://mirrors.kernel.org/gnu/libmicrohttpd/libmicrohttpd-0.9.65.tar.gz
+Source0  : https://mirrors.kernel.org/gnu/libmicrohttpd/libmicrohttpd-0.9.65.tar.gz
+Source99 : https://mirrors.kernel.org/gnu/libmicrohttpd/libmicrohttpd-0.9.65.tar.gz.sig
 Summary  : a small C library that is supposed to make it easy to run an HTTP server as part of another application.
 Group    : Development/Tools
 License  : LGPL-2.1
 Requires: libmicrohttpd-lib = %{version}-%{release}
 Requires: libmicrohttpd-license = %{version}-%{release}
+BuildRequires : curl-dev
+BuildRequires : file-dev
 BuildRequires : gnutls-dev
 BuildRequires : grep
 BuildRequires : libgcrypt-dev
@@ -69,14 +71,15 @@ license components for the libmicrohttpd package.
 
 
 %prep
-%setup -q -n libmicrohttpd-0.9.64
+%setup -q -n libmicrohttpd-0.9.65
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1560176866
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1562515981
+export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
@@ -88,14 +91,14 @@ export CXXFLAGS="$CXXFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-
 make  %{?_smp_mflags}
 
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1560176866
+export SOURCE_DATE_EPOCH=1562515981
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libmicrohttpd
 cp COPYING %{buildroot}/usr/share/package-licenses/libmicrohttpd/COPYING
@@ -118,7 +121,7 @@ cp COPYING %{buildroot}/usr/share/package-licenses/libmicrohttpd/COPYING
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libmicrohttpd.so.12
-/usr/lib64/libmicrohttpd.so.12.51.0
+/usr/lib64/libmicrohttpd.so.12.52.0
 
 %files license
 %defattr(0644,root,root,0755)
