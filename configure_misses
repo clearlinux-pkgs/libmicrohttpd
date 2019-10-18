@@ -9,6 +9,7 @@ Configure miss: whether to try _TANDEM_SOURCE macro
 Configure miss: whether to try _ALL_SOURCE macro
 Configure miss: whether _XOPEN_SOURCE is already defined
 Configure miss: useful system-specific features
+Configure miss: windres
 Configure miss: pthread_np.h
 Configure miss: whether pthread_attr_setname_np is declared
 Configure miss: pthread_setname_np(3) in NetBSD or OSF1 form
