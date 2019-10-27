@@ -1,5 +1,6 @@
-0.9.67
+0.9.68
 curl-dev
 file-dev
 pkgconfig(zlib)
 texinfo
+util-linux

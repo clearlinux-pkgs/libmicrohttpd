@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x939E6BE1E29FC3CC (grothoff@gnu.org)
 #
 Name     : libmicrohttpd
-Version  : 0.9.67
-Release  : 22
-URL      : https://mirrors.kernel.org/gnu/libmicrohttpd/libmicrohttpd-0.9.67.tar.gz
-Source0  : https://mirrors.kernel.org/gnu/libmicrohttpd/libmicrohttpd-0.9.67.tar.gz
-Source1 : https://mirrors.kernel.org/gnu/libmicrohttpd/libmicrohttpd-0.9.67.tar.gz.sig
+Version  : 0.9.68
+Release  : 23
+URL      : https://mirrors.kernel.org/gnu/libmicrohttpd/libmicrohttpd-0.9.68.tar.gz
+Source0  : https://mirrors.kernel.org/gnu/libmicrohttpd/libmicrohttpd-0.9.68.tar.gz
+Source1 : https://mirrors.kernel.org/gnu/libmicrohttpd/libmicrohttpd-0.9.68.tar.gz.sig
 Summary  : a small C library that is supposed to make it easy to run an HTTP server as part of another application.
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -23,6 +23,7 @@ BuildRequires : libgcrypt-dev
 BuildRequires : pkgconfig(gnutls)
 BuildRequires : pkgconfig(zlib)
 BuildRequires : texinfo
+BuildRequires : util-linux
 
 %description
 About
@@ -71,14 +72,14 @@ license components for the libmicrohttpd package.
 
 
 %prep
-%setup -q -n libmicrohttpd-0.9.67
+%setup -q -n libmicrohttpd-0.9.68
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571405937
+export SOURCE_DATE_EPOCH=1572187036
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
@@ -99,10 +100,10 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1571405937
+export SOURCE_DATE_EPOCH=1572187036
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libmicrohttpd
-cp %{_builddir}/libmicrohttpd-0.9.67/COPYING %{buildroot}/usr/share/package-licenses/libmicrohttpd/8a7f857077114c00b2777664d804a6afaa93049f
+cp %{_builddir}/libmicrohttpd-0.9.68/COPYING %{buildroot}/usr/share/package-licenses/libmicrohttpd/8a7f857077114c00b2777664d804a6afaa93049f
 %make_install
 
 %files
@@ -122,7 +123,7 @@ cp %{_builddir}/libmicrohttpd-0.9.67/COPYING %{buildroot}/usr/share/package-lice
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libmicrohttpd.so.12
-/usr/lib64/libmicrohttpd.so.12.54.0
+/usr/lib64/libmicrohttpd.so.12.55.0
 
 %files license
 %defattr(0644,root,root,0755)
