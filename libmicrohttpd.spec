@@ -5,12 +5,12 @@
 # Source0 file verified with key 0x939E6BE1E29FC3CC (grothoff@gnu.org)
 #
 Name     : libmicrohttpd
-Version  : 0.9.68
-Release  : 24
-URL      : https://mirrors.kernel.org/gnu/libmicrohttpd/libmicrohttpd-0.9.68.tar.gz
-Source0  : https://mirrors.kernel.org/gnu/libmicrohttpd/libmicrohttpd-0.9.68.tar.gz
-Source1 : https://mirrors.kernel.org/gnu/libmicrohttpd/libmicrohttpd-0.9.68.tar.gz.sig
-Summary  : A library for creating an embedded HTTP server
+Version  : 0.9.69
+Release  : 25
+URL      : https://mirrors.kernel.org/gnu/libmicrohttpd/libmicrohttpd-0.9.69.tar.gz
+Source0  : https://mirrors.kernel.org/gnu/libmicrohttpd/libmicrohttpd-0.9.69.tar.gz
+Source1  : https://mirrors.kernel.org/gnu/libmicrohttpd/libmicrohttpd-0.9.69.tar.gz.sig
+Summary  : a small C library that is supposed to make it easy to run an HTTP server as part of another application.
 Group    : Development/Tools
 License  : LGPL-2.1
 Requires: libmicrohttpd-info = %{version}-%{release}
@@ -22,9 +22,8 @@ BuildRequires : gnutls-dev
 BuildRequires : grep
 BuildRequires : libgcrypt-dev
 BuildRequires : pkgconfig(gnutls)
-BuildRequires : pkgconfig(zlib)
 BuildRequires : texinfo
-BuildRequires : util-linux
+BuildRequires : zlib-dev
 
 %description
 About
@@ -40,6 +39,7 @@ Summary: dev components for the libmicrohttpd package.
 Group: Development
 Requires: libmicrohttpd-lib = %{version}-%{release}
 Provides: libmicrohttpd-devel = %{version}-%{release}
+Requires: libmicrohttpd = %{version}-%{release}
 Requires: libmicrohttpd = %{version}-%{release}
 
 %description dev
@@ -72,15 +72,16 @@ license components for the libmicrohttpd package.
 
 
 %prep
-%setup -q -n libmicrohttpd-0.9.68
-cd %{_builddir}/libmicrohttpd-0.9.68
+%setup -q -n libmicrohttpd-0.9.69
+cd %{_builddir}/libmicrohttpd-0.9.69
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1573789802
+export SOURCE_DATE_EPOCH=1576521299
+# -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -100,10 +101,10 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1573789802
+export SOURCE_DATE_EPOCH=1576521299
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libmicrohttpd
-cp %{_builddir}/libmicrohttpd-0.9.68/COPYING %{buildroot}/usr/share/package-licenses/libmicrohttpd/8a7f857077114c00b2777664d804a6afaa93049f
+cp %{_builddir}/libmicrohttpd-0.9.69/COPYING %{buildroot}/usr/share/package-licenses/libmicrohttpd/8a7f857077114c00b2777664d804a6afaa93049f
 %make_install
 
 %files
