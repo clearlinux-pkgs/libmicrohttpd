@@ -5,12 +5,12 @@
 # Source0 file verified with key 0x939E6BE1E29FC3CC (grothoff@gnu.org)
 #
 Name     : libmicrohttpd
-Version  : 0.9.70
-Release  : 26
-URL      : https://mirrors.kernel.org/gnu/libmicrohttpd/libmicrohttpd-0.9.70.tar.gz
-Source0  : https://mirrors.kernel.org/gnu/libmicrohttpd/libmicrohttpd-0.9.70.tar.gz
-Source1  : https://mirrors.kernel.org/gnu/libmicrohttpd/libmicrohttpd-0.9.70.tar.gz.sig
-Summary  : a small C library that is supposed to make it easy to run an HTTP server as part of another application.
+Version  : 0.9.71
+Release  : 27
+URL      : https://mirrors.kernel.org/gnu/libmicrohttpd/libmicrohttpd-0.9.71.tar.gz
+Source0  : https://mirrors.kernel.org/gnu/libmicrohttpd/libmicrohttpd-0.9.71.tar.gz
+Source1  : https://mirrors.kernel.org/gnu/libmicrohttpd/libmicrohttpd-0.9.71.tar.gz.sig
+Summary  : A library for creating an embedded HTTP server
 Group    : Development/Tools
 License  : LGPL-2.1
 Requires: libmicrohttpd-info = %{version}-%{release}
@@ -22,8 +22,8 @@ BuildRequires : gnutls-dev
 BuildRequires : grep
 BuildRequires : libgcrypt-dev
 BuildRequires : pkgconfig(gnutls)
+BuildRequires : pkgconfig(zlib)
 BuildRequires : texinfo
-BuildRequires : zlib-dev
 
 %description
 About
@@ -39,7 +39,6 @@ Summary: dev components for the libmicrohttpd package.
 Group: Development
 Requires: libmicrohttpd-lib = %{version}-%{release}
 Provides: libmicrohttpd-devel = %{version}-%{release}
-Requires: libmicrohttpd = %{version}-%{release}
 Requires: libmicrohttpd = %{version}-%{release}
 
 %description dev
@@ -72,23 +71,22 @@ license components for the libmicrohttpd package.
 
 
 %prep
-%setup -q -n libmicrohttpd-0.9.70
-cd %{_builddir}/libmicrohttpd-0.9.70
+%setup -q -n libmicrohttpd-0.9.71
+cd %{_builddir}/libmicrohttpd-0.9.71
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1581281768
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1593466927
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
 export CFLAGS="$CFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-sections -flto=4 -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-sections -flto=4 -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-sections -flto=4 -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-sections -flto=4 -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-sections -flto=4 -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-sections -flto=4 -fno-semantic-interposition "
 %configure --disable-static
 make  %{?_smp_mflags}
@@ -101,10 +99,10 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1581281768
+export SOURCE_DATE_EPOCH=1593466927
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libmicrohttpd
-cp %{_builddir}/libmicrohttpd-0.9.70/COPYING %{buildroot}/usr/share/package-licenses/libmicrohttpd/8a7f857077114c00b2777664d804a6afaa93049f
+cp %{_builddir}/libmicrohttpd-0.9.71/COPYING %{buildroot}/usr/share/package-licenses/libmicrohttpd/8a7f857077114c00b2777664d804a6afaa93049f
 %make_install
 
 %files
@@ -126,7 +124,7 @@ cp %{_builddir}/libmicrohttpd-0.9.70/COPYING %{buildroot}/usr/share/package-lice
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libmicrohttpd.so.12
-/usr/lib64/libmicrohttpd.so.12.55.0
+/usr/lib64/libmicrohttpd.so.12.56.0
 
 %files license
 %defattr(0644,root,root,0755)

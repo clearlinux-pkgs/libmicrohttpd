@@ -47,6 +47,7 @@ libmicrohttpd.so.12:MHD_run
 libmicrohttpd.so.12:MHD_run_from_select
 libmicrohttpd.so.12:MHD_set_connection_option
 libmicrohttpd.so.12:MHD_set_connection_value
+libmicrohttpd.so.12:MHD_set_connection_value_n
 libmicrohttpd.so.12:MHD_set_panic_func
 libmicrohttpd.so.12:MHD_set_response_options
 libmicrohttpd.so.12:MHD_start_daemon
