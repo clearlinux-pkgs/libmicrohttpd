@@ -25,7 +25,6 @@ Configure miss: struct sockaddr_storage.ss_len
 Configure miss: whether gmtime_s is declared
 Configure miss: clock_get_time
 Configure miss: function sysconf
-Configure miss: whether libcurl is usable
 Configure miss: suitable libmagic
 Configure miss: zzuf
 Configure miss: socat

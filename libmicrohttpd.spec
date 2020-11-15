@@ -6,7 +6,7 @@
 #
 Name     : libmicrohttpd
 Version  : 0.9.71
-Release  : 27
+Release  : 28
 URL      : https://mirrors.kernel.org/gnu/libmicrohttpd/libmicrohttpd-0.9.71.tar.gz
 Source0  : https://mirrors.kernel.org/gnu/libmicrohttpd/libmicrohttpd-0.9.71.tar.gz
 Source1  : https://mirrors.kernel.org/gnu/libmicrohttpd/libmicrohttpd-0.9.71.tar.gz.sig
@@ -79,7 +79,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1593466927
+export SOURCE_DATE_EPOCH=1605466179
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -88,7 +88,7 @@ export CFLAGS="$CFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-sect
 export FCFLAGS="$FFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-sections -flto=4 -fno-semantic-interposition "
 export FFLAGS="$FFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-sections -flto=4 -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-sections -flto=4 -fno-semantic-interposition "
-%configure --disable-static
+%configure --disable-static --disable-curl
 make  %{?_smp_mflags}
 
 %check
@@ -96,10 +96,10 @@ export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-make VERBOSE=1 V=1 %{?_smp_mflags} check
+make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1593466927
+export SOURCE_DATE_EPOCH=1605466179
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libmicrohttpd
 cp %{_builddir}/libmicrohttpd-0.9.71/COPYING %{buildroot}/usr/share/package-licenses/libmicrohttpd/8a7f857077114c00b2777664d804a6afaa93049f
