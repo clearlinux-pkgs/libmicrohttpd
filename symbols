@@ -12,6 +12,7 @@ libmicrohttpd.so.12:MHD_create_response_from_fd
 libmicrohttpd.so.12:MHD_create_response_from_fd64
 libmicrohttpd.so.12:MHD_create_response_from_fd_at_offset
 libmicrohttpd.so.12:MHD_create_response_from_fd_at_offset64
+libmicrohttpd.so.12:MHD_create_response_from_iovec
 libmicrohttpd.so.12:MHD_create_response_from_pipe
 libmicrohttpd.so.12:MHD_del_response_header
 libmicrohttpd.so.12:MHD_destroy_post_processor
@@ -46,6 +47,7 @@ libmicrohttpd.so.12:MHD_quiesce_daemon
 libmicrohttpd.so.12:MHD_resume_connection
 libmicrohttpd.so.12:MHD_run
 libmicrohttpd.so.12:MHD_run_from_select
+libmicrohttpd.so.12:MHD_run_wait
 libmicrohttpd.so.12:MHD_set_connection_option
 libmicrohttpd.so.12:MHD_set_connection_value
 libmicrohttpd.so.12:MHD_set_connection_value_n

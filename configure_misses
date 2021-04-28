@@ -1,34 +1,39 @@
-Configure miss: whether z/OS special settings are required
-Configure miss: whether _GNU_SOURCE is already defined
-Configure miss: whether to try __BSD_VISIBLE macro
-Configure miss: whether to try _DARWIN_C_SOURCE macro
-Configure miss: whether to try __EXTENSIONS__ macro
-Configure miss: whether to try _NETBSD_SOURCE macro
-Configure miss: whether to try _BSD_SOURCE macro
-Configure miss: whether to try _TANDEM_SOURCE macro
-Configure miss: whether to try _ALL_SOURCE macro
-Configure miss: whether _XOPEN_SOURCE is already defined
-Configure miss: useful system-specific features
-Configure miss: windres
-Configure miss: pthread_np.h
-Configure miss: whether pthread_attr_setname_np is declared
-Configure miss: pthread_setname_np(3) in NetBSD or OSF1 form
-Configure miss: machine/endian.h
-Configure miss: sys/machine.h
-Configure miss: sys/byteorder.h
-Configure miss: machine/param.h
-Configure miss: sys/isa_defs.h
-Configure miss: sockLib.h
+Configure miss: 32-bit host C ABI
+Configure miss: CFLocaleCopyPreferredLanguages
+Configure miss: clock_get_time
+Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: inetLib.h
+Configure miss: machine/endian.h
+Configure miss: machine/param.h
+Configure miss: pthread_np.h
+Configure miss: pthread_setname_np(3) in NetBSD or OSF1 form
+Configure miss: socat
+Configure miss: sockLib.h
 Configure miss: struct sockaddr_in6.sin6_len
 Configure miss: struct sockaddr_storage.ss_len
-Configure miss: whether gmtime_s is declared
-Configure miss: clock_get_time
 Configure miss: suitable libmagic
-Configure miss: zzuf
-Configure miss: socat
-Configure miss: whether to add pkg-config special search directories
+Configure miss: sys/byteorder.h
+Configure miss: sys/isa_defs.h
+Configure miss: sys/machine.h
+Configure miss: useful system-specific features
 Configure miss: whether GnuTLS require libgcrypt initialisaion
+Configure miss: whether NLS is requested
+Configure miss: whether _GNU_SOURCE is already defined
+Configure miss: whether _XOPEN_SOURCE is already defined
+Configure miss: whether gmtime_s is declared
+Configure miss: whether pthread_attr_setname_np is declared
+Configure miss: whether to add pkg-config special search directories
+Configure miss: whether to compile experimental code
 Configure miss: whether to compile with support for code coverage analysis
 Configure miss: whether to enable debug asserts
-Configure miss: whether to compile experimental code
+Configure miss: whether to try _ALL_SOURCE macro
+Configure miss: whether to try _BSD_SOURCE macro
+Configure miss: whether to try _DARWIN_C_SOURCE macro
+Configure miss: whether to try _NETBSD_SOURCE macro
+Configure miss: whether to try _TANDEM_SOURCE macro
+Configure miss: whether to try __BSD_VISIBLE macro
+Configure miss: whether to try __EXTENSIONS__ macro
+Configure miss: whether to use NLS
+Configure miss: whether z/OS special settings are required
+Configure miss: windres
+Configure miss: zzuf
