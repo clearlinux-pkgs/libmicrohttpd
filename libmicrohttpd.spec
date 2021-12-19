@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x460A317C3326D2AE (k2k@narod.ru)
 #
 Name     : libmicrohttpd
-Version  : 0.9.73
-Release  : 30
-URL      : https://mirrors.kernel.org/gnu/libmicrohttpd/libmicrohttpd-0.9.73.tar.gz
-Source0  : https://mirrors.kernel.org/gnu/libmicrohttpd/libmicrohttpd-0.9.73.tar.gz
-Source1  : https://mirrors.kernel.org/gnu/libmicrohttpd/libmicrohttpd-0.9.73.tar.gz.sig
+Version  : 0.9.74
+Release  : 31
+URL      : https://mirrors.kernel.org/gnu/libmicrohttpd/libmicrohttpd-0.9.74.tar.gz
+Source0  : https://mirrors.kernel.org/gnu/libmicrohttpd/libmicrohttpd-0.9.74.tar.gz
+Source1  : https://mirrors.kernel.org/gnu/libmicrohttpd/libmicrohttpd-0.9.74.tar.gz.sig
 Summary  : A library for creating an embedded HTTP server
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -70,23 +70,23 @@ license components for the libmicrohttpd package.
 
 
 %prep
-%setup -q -n libmicrohttpd-0.9.73
-cd %{_builddir}/libmicrohttpd-0.9.73
+%setup -q -n libmicrohttpd-0.9.74
+cd %{_builddir}/libmicrohttpd-0.9.74
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1619635077
+export SOURCE_DATE_EPOCH=1639939442
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-sections -flto=4 -fno-semantic-interposition "
-export FCFLAGS="$FFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-sections -flto=4 -fno-semantic-interposition "
-export FFLAGS="$FFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-sections -flto=4 -fno-semantic-interposition "
-export CXXFLAGS="$CXXFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-sections -flto=4 -fno-semantic-interposition "
+export CFLAGS="$CFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-sections -flto=auto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-sections -flto=auto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-sections -flto=auto -fno-semantic-interposition "
+export CXXFLAGS="$CXXFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-sections -flto=auto -fno-semantic-interposition "
 %configure --disable-static --disable-curl
 make  %{?_smp_mflags}
 
@@ -98,10 +98,10 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1619635077
+export SOURCE_DATE_EPOCH=1639939442
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libmicrohttpd
-cp %{_builddir}/libmicrohttpd-0.9.73/COPYING %{buildroot}/usr/share/package-licenses/libmicrohttpd/8a7f857077114c00b2777664d804a6afaa93049f
+cp %{_builddir}/libmicrohttpd-0.9.74/COPYING %{buildroot}/usr/share/package-licenses/libmicrohttpd/8a7f857077114c00b2777664d804a6afaa93049f
 %make_install
 
 %files
@@ -123,7 +123,7 @@ cp %{_builddir}/libmicrohttpd-0.9.73/COPYING %{buildroot}/usr/share/package-lice
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libmicrohttpd.so.12
-/usr/lib64/libmicrohttpd.so.12.58.0
+/usr/lib64/libmicrohttpd.so.12.59.0
 
 %files license
 %defattr(0644,root,root,0755)
