@@ -36,6 +36,7 @@ libmicrohttpd.so.12:MHD_get_response_header
 libmicrohttpd.so.12:MHD_get_response_headers
 libmicrohttpd.so.12:MHD_get_timeout
 libmicrohttpd.so.12:MHD_get_version
+libmicrohttpd.so.12:MHD_get_version_bin
 libmicrohttpd.so.12:MHD_http_unescape
 libmicrohttpd.so.12:MHD_is_feature_supported
 libmicrohttpd.so.12:MHD_lookup_connection_value
