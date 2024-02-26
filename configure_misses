@@ -1,19 +1,25 @@
-Configure miss: 32-bit host C ABI
-Configure miss: 32-bit host C ABI
-Configure miss: CFLocaleCopyPreferredLanguages
-Configure miss: CFLocaleCopyPreferredLanguages
 Configure miss: GnuTLS quirks
 Configure miss: GnuTLS quirks
 Configure miss: function clock_get_time
 Configure miss: function clock_get_time
+Configure miss: function cpuset_getaffinity
+Configure miss: function cpuset_getaffinity
 Configure miss: function gethrtime
 Configure miss: function gethrtime
 Configure miss: function magic_open
 Configure miss: function magic_open
+Configure miss: function pstat_getdynamic
+Configure miss: function pstat_getdynamic
+Configure miss: function sched_getaffinity_np
+Configure miss: function sched_getaffinity_np
 Configure miss: function sysctl
 Configure miss: function sysctl
 Configure miss: function sysctlbyname
 Configure miss: function sysctlbyname
+Configure miss: function vxCpuEnabledGet
+Configure miss: function vxCpuEnabledGet
+Configure miss: gcc flag to warn on unknown -W parameters
+Configure miss: gcc flag to warn on unknown -W parameters
 Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: inetLib.h
@@ -28,16 +34,18 @@ Configure miss: pthread_np.h
 Configure miss: pthread_np.h
 Configure miss: pthread_setname_np(3) in NetBSD or OSF1 form
 Configure miss: pthread_setname_np(3) in NetBSD or OSF1 form
-Configure miss: socat
-Configure miss: socat
 Configure miss: sockLib.h
 Configure miss: sockLib.h
 Configure miss: struct sockaddr_in6.sin6_len
 Configure miss: struct sockaddr_in6.sin6_len
 Configure miss: struct sockaddr_storage.ss_len
 Configure miss: struct sockaddr_storage.ss_len
+Configure miss: sys/_cpuset.h
+Configure miss: sys/_cpuset.h
 Configure miss: sys/byteorder.h
 Configure miss: sys/byteorder.h
+Configure miss: sys/cpuset.h
+Configure miss: sys/cpuset.h
 Configure miss: sys/isa_defs.h
 Configure miss: sys/isa_defs.h
 Configure miss: sys/machine.h
@@ -50,30 +58,70 @@ Configure miss: usable PAGE_SIZE macro
 Configure miss: usable PAGE_SIZE macro
 Configure miss: useful system-specific features
 Configure miss: useful system-specific features
+Configure miss: vxCpuLib.h
+Configure miss: vxCpuLib.h
+Configure miss: whether CPU_COUNT_S() expects max CPU number as 'size' parameter
+Configure miss: whether CPU_COUNT_S() expects max CPU number as 'size' parameter
+Configure miss: whether CTL_HW is declared
+Configure miss: whether CTL_HW is declared
+Configure miss: whether DEBUG macro is defined
+Configure miss: whether DEBUG macro is defined
+Configure miss: whether FD_SETSIZE is overridable
+Configure miss: whether FD_SETSIZE is overridable
 Configure miss: whether GnuTLS require libgcrypt initialisation
 Configure miss: whether GnuTLS require libgcrypt initialisation
-Configure miss: whether NLS is requested
-Configure miss: whether NLS is requested
+Configure miss: whether HW_AVAILCPU is declared
+Configure miss: whether HW_AVAILCPU is declared
+Configure miss: whether HW_NCPU is declared
+Configure miss: whether HW_NCPU is declared
+Configure miss: whether HW_NCPUONLINE is declared
+Configure miss: whether HW_NCPUONLINE is declared
+Configure miss: whether MHD_FAVOR_FAST_CODE is declared
+Configure miss: whether MHD_FAVOR_FAST_CODE is declared
+Configure miss: whether MHD_FAVOR_SMALL_CODE is declared
+Configure miss: whether MHD_FAVOR_SMALL_CODE is declared
+Configure miss: whether NDEBUG macro is defined
+Configure miss: whether NDEBUG macro is defined
+Configure miss: whether _DEBUG macro is defined
+Configure miss: whether _DEBUG macro is defined
 Configure miss: whether _GNU_SOURCE is already defined
 Configure miss: whether _GNU_SOURCE is already defined
+Configure miss: whether _SC_CRAY_NCPU is declared
+Configure miss: whether _SC_CRAY_NCPU is declared
+Configure miss: whether _SC_NPROC_ONLN is declared
+Configure miss: whether _SC_NPROC_ONLN is declared
 Configure miss: whether _XOPEN_SOURCE is already defined
 Configure miss: whether _XOPEN_SOURCE is already defined
 Configure miss: whether clock_get_time is declared
 Configure miss: whether clock_get_time is declared
+Configure miss: whether cpuset_getaffinity is declared
+Configure miss: whether cpuset_getaffinity is declared
+Configure miss: whether gcc supports -Wignored-optimization-argument flag
+Configure miss: whether gcc supports -Wignored-optimization-argument flag
+Configure miss: whether gcc supports -Winvalid-command-line-argument flag
+Configure miss: whether gcc supports -Winvalid-command-line-argument flag
+Configure miss: whether gcc supports -Wunknown-argument flag
+Configure miss: whether gcc supports -Wunknown-argument flag
+Configure miss: whether gcc supports -Wunused-command-line-argument flag
+Configure miss: whether gcc supports -Wunused-command-line-argument flag
+Configure miss: whether gcc supports -qlonglong flag
+Configure miss: whether gcc supports -qlonglong flag
 Configure miss: whether gethrtime is declared
 Configure miss: whether gethrtime is declared
 Configure miss: whether gmtime_s is declared
 Configure miss: whether gmtime_s is declared
 Configure miss: whether magic_open is declared
 Configure miss: whether magic_open is declared
+Configure miss: whether pstat_getdynamic is declared
+Configure miss: whether pstat_getdynamic is declared
 Configure miss: whether pthread_attr_setname_np is declared
 Configure miss: whether pthread_attr_setname_np is declared
+Configure miss: whether sched_getaffinity_np is declared
+Configure miss: whether sched_getaffinity_np is declared
 Configure miss: whether sysctl is declared
 Configure miss: whether sysctl is declared
 Configure miss: whether sysctlbyname is declared
 Configure miss: whether sysctlbyname is declared
-Configure miss: whether to add pkg-config special search directories
-Configure miss: whether to add pkg-config special search directories
 Configure miss: whether to compile experimental code
 Configure miss: whether to compile experimental code
 Configure miss: whether to compile with support for code coverage analysis
@@ -96,13 +144,9 @@ Configure miss: whether to try __BSD_VISIBLE macro
 Configure miss: whether to try __BSD_VISIBLE macro
 Configure miss: whether to try __EXTENSIONS__ macro
 Configure miss: whether to try __EXTENSIONS__ macro
-Configure miss: whether to use NLS
-Configure miss: whether to use NLS
-Configure miss: whether z/OS special settings are required
-Configure miss: whether z/OS special settings are required
+Configure miss: whether vxCpuEnabledGet is declared
+Configure miss: whether vxCpuEnabledGet is declared
 Configure miss: windres
 Configure miss: windres
 Configure miss: x86_64-generic-linux-gnu-file
 Configure miss: x86_64-generic-linux-gnu-file
-Configure miss: zzuf
-Configure miss: zzuf
